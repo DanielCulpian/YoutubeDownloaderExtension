@@ -1,8 +1,7 @@
 # YouTube Downloader Extension
 
 A Chromium browser extension for downloading YouTube videos, audio, playlists,
-and precise clips through a local Python/FFmpeg engine. Created by
-[DanielCulpian](https://github.com/DanielCulpian). Licensed under [MIT](LICENSE).
+and precise clips through a local Python/FFmpeg engine. Licensed under [MIT](LICENSE).
 
 **Supported operating system: desktop Windows 10/11.** The extension targets
 current Chromium-based browsers that support Manifest V3 and Native Messaging:
