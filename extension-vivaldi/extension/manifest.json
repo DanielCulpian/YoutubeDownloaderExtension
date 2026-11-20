@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Downloader",
+  "version": "1.2.0",
+  "description": "Download YouTube video, audio, playlists, and verified clips with a local engine.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2y5SNS33TI4VaN+JKRsBVeUhd9oXnYVXSIOY6XDoPsH1pkOIkyly+oxny9kFRBPHpIrLciMWLWWCDhTkeQYq41I88FcV26EzItbSgL41tqiguviO6GnHyq1s1mAR70bhj9UlSxqSduaUG4LV3C/gvbhy4Wm14W8HK01UnCrAb5GUgSwfypErK8Ff9lPOpXDdJq/OWACf7ytyPTFiNKDCcgUTdFQDQLSi6ltOdno+e5Ham6ctACSpcUSMyaeO0GDM8jAmbve5v6TN/9G9Ekk0N0H2vDQlDfauIiGTRur2Iu3X5pYf6Hz8Kvorjm+gSDH2BxSL6OQL9Ypyqv5ksBXJ0wIDAQAB",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "nativeMessaging",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Descargar este video",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "player.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "popup.css",
+        "popup.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*",
+        "https://m.youtube.com/*"
+      ]
+    }
+  ]
+}

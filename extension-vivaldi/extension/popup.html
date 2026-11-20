@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>YouTube Downloader</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><button id="close-panel" class="close-panel" aria-label="Cerrar panel" hidden>×</button><div class="brand">▶ <span>YOUTUBE DOWNLOADER</span></div><h1>Guarda ese momento.</h1><p>Vídeo, audio o solo la parte que te interesa.</p></header>
+  <main>
+    <section class="card"><div class="heading"><label for="url">01 · Enlace de YouTube</label><button id="detect" class="text">Detectar pestaña</button></div><input id="url" type="url" placeholder="https://www.youtube.com/watch?v=…"><p id="video-title" class="muted">Abre un vídeo y pulsa Detectar pestaña.</p><label class="check"><input id="playlist" type="checkbox"> Descargar playlist completa</label></section>
+    <section class="card"><label class="section-label">02 · Elige el formato</label><div class="formats"><label><input name="format" type="radio" value="mp4" checked><span><b>MP4</b><small>Vídeo + audio</small></span></label><label><input name="format" type="radio" value="mp3"><span><b>MP3</b><small>Solo audio</small></span></label></div></section>
+    <section class="card"><label class="check"><input id="clip" type="checkbox"> Descargar solo un fragmento</label><div class="times"><div><label for="start">Inicio</label><input id="start" placeholder="0:00" disabled><button id="mark-start" class="text" disabled>Marcar aquí</button></div><span>→</span><div><label for="end">Final</label><input id="end" placeholder="1:30" disabled><button id="mark-end" class="text" disabled>Marcar aquí</button></div></div><p class="muted">HH:MM:SS · MM:SS · segundos. Recorte seguro: descarga el original, recorta y verifica ambas pistas.</p></section>
+    <section class="destination"><label for="destination">Carpeta de descargas</label><div class="row"><input id="destination" placeholder="Descargas del sistema"><button id="folder" title="Elegir carpeta">Elegir</button><button id="open" title="Abrir carpeta">↗</button></div><p class="muted">Vídeos individuales: aquí. Playlists: en una carpeta con el nombre de la lista.</p></section>
+    <div class="actions"><button id="download" class="primary" disabled>↓ Descargar</button><button id="cancel" disabled>Cancelar</button><button id="connect" class="text">Conectar motor</button></div>
+    <section class="status" aria-live="polite"><div class="row"><span id="status">Conectando…</span><span id="percent"></span></div><progress id="progress" max="100" value="0"></progress><p id="current"></p><p id="detail" class="muted"></p><p id="error" role="alert"></p><details><summary>Registro y conexión</summary><p id="extension-id" class="muted"></p><pre id="logs">Sin mensajes.</pre></details></section>
+    <footer>La descarga continúa al cerrar este panel. Mantén el navegador abierto.<span class="credits">Creado por <a href="https://github.com/DanielCulpian" target="_blank" rel="noopener noreferrer">DanielCulpian ↗</a></span></footer>
+  </main><script src="popup.js"></script>
+</body></html>
