@@ -1,4 +1,4 @@
-# YouTube Downloader
+# YouTube Downloader Extension
 
 A Chromium browser extension for downloading YouTube videos, audio, playlists,
 and precise clips through a local Python/FFmpeg engine. Created by
