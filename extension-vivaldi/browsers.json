@@ -1,0 +1,11 @@
+{
+  "registryPrefixes": [
+    "Google\\Chrome",
+    "Microsoft\\Edge",
+    "BraveSoftware\\Brave-Browser",
+    "BraveSoftware\\Brave-Browser-Beta",
+    "BraveSoftware\\Brave-Browser-Nightly",
+    "Vivaldi",
+    "Chromium"
+  ]
+}
